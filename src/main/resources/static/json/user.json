@@ -1,4 +1,3 @@
-
 {"data":
 [{"check":"","id":"张三","title":"普通管理员","type":"通知","person":"研发部","date":"22","oper":"Java开发工程师","sex":"男"},
   {"check":"","id":"李进","title":"超级管理员","type":"通知","person":"销售部","date":"28","oper":"销售经理","sex":"男"},
