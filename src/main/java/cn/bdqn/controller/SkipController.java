@@ -6,72 +6,80 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class SkipController {
 
-    @RequestMapping("/")
-    public  String demo(){
-        return "demo";
-    }
-
+    //首页
     @RequestMapping("/home")
     public String home() {
         return "index";
     }
 
+    //修改密码
+    @RequestMapping("/userPwd")
+    public String userPwd() {
+        return "userPwd";
+    }
+
+    //新闻列表
     @RequestMapping("/news")
-    public String news() {
+    public String news(){
         return "news";
     }
 
-    @RequestMapping("/log")
-    public String log() {
-        return "log";
+    //新闻添加
+    @RequestMapping("/newsAdd")
+    public String newsAdd(){
+        return "newsAdd";
     }
 
-    @RequestMapping("/role")
-    public String role() { return "role"; }
+    //退出系统
+    @RequestMapping("/logOut ")
+    public String logOut(){
+        return "logOut";
+    }
 
-    @RequestMapping("/user1")
-    public String user1() { return "user1"; }
+    //医生列表
+    @RequestMapping("/doctor")
+    public String doctor(){
+        return "doctor";
+    }
 
-    @RequestMapping("/department1")
-    public String department1() { return "department1"; }
+    //添加医生
+    @RequestMapping("/doctorAdd")
+    public String doctorAdd(){
+        return "doctorAdd";
+    }
 
-    @RequestMapping("/table1")
-    public String table1() { return "table1"; }
+    //科室列表
+    @RequestMapping("/koffice")
+    public String koffice(){
+        return "koffice";
+    }
 
-    @RequestMapping("/table3")
-    public String table3() { return "table3"; }
+    //添加科室
+    @RequestMapping("/kofficeAdd")
+    public String kofficeAdd(){
+        return "kofficeAdd";
+    }
 
-    @RequestMapping("/table4")
-    public String table4() { return "table4"; }
+    //登录
+    @RequestMapping("/login")
+    public String login(){
+        return "login";
+    }
 
-    @RequestMapping("/table2")
-    public String table2() { return "table2"; }
+    //病人列表
+    @RequestMapping("/patients")
+    public String patients(){
+        return "patients";
+    }
 
-    @RequestMapping("/table5")
-    public String table5() { return "table5"; }
+    //用户列表
+    @RequestMapping("/user")
+    public String user(){
+        return "user";
+    }
 
-    @RequestMapping("/treeTable")
-    public String treeTable() { return "treeTable"; }
-
-    @RequestMapping("/tableTabs")
-    public String tableTabs() { return "tableTabs"; }
-
-    @RequestMapping("/goods")
-    public String goods() { return "goods"; }
-
-    @RequestMapping("/book01")
-    public String book01() { return "book01"; }
-
-    @RequestMapping("/book02")
-    public String book02() { return "book02"; }
-
-    @RequestMapping("/form")
-    public String form() { return "form"; }
-
-    @RequestMapping("/analysis")
-    public String analysis() { return "analysis"; }
-
-    @RequestMapping("/from_analysis")
-    public String from_analysis() { return "from_analysis"; }
-
+    @RequestMapping("/userAdd")
+    public String userAdd(){
+        return "userAdd";
+    }
 }

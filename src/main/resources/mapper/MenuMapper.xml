@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.dao.MenuMapper">
+
+    <!--获取一级菜单列表-->
+    <select id="findMenuList" resultType="Menu">
+        select m.id id,m.isqianhou isquanhou,m.menuName menuName,
+        m.menuPath menuPath,m.parentId parentId,m.status status
+        from menu m
+        join role_menu rm on m.id=rm.menuId
+        join role r on rm.roleId=r.id
+        where m.isqianhou=#{isqianhou} and m.status=1 and r.id=#{roleId}
+        and m.parentId=0
+    </select>
+
+    <!-- 获取二级菜单列表 -->
+    <select id="findTwoMenuList" resultType="Menu">
+        select m.id id,m.isqianhou isquanhou,m.menuName menuName,
+        m.menuPath menuPath,m.parentId parentId,m.status status
+        from menu m
+        join role_menu rm on m.id=rm.menuId
+        join role r on rm.roleId=r.id
+        where m.isqianhou=#{isqianhou} and m.status=1 and r.id=#{roleId}
+        and m.parentId != 0
+    </select>
+
+</mapper>
