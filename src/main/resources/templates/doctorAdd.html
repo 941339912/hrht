@@ -29,6 +29,7 @@
         <!--引入菜单栏-->
         <div class="left" th:include="nav::nav"></div>
         <!--右侧-->
+        <input type="hidden" th:value="${menuId}" id="menuId"/>
         <div class="right">
             <fieldset class="layui-elem-field layui-field-title">
                 <legend>添加医生</legend>
